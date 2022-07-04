@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>Links | FandyRdh</title>
+    
+    <link rel="icon" href="https://i.ibb.co/HHSKkLB/Logo-Fandy-White-BG.webp">
+</head>
+<body>
+    <div class="main">
+        <div class="content">
+            <h5><span>Resume</span><br>Fandy Ramadhana</h5>
+            <iframe src="https://drive.google.com/file/d/12F3CE2fU9yvALhuhOxuXy0R1SnKIkfoS/preview" allow="autoplay"></iframe>
+            <p>Last Update - [<span id="lastUpdate"></span> Days ago]</p>
+        </div>
+        <div class="button-group">
+            <a href="https://drive.google.com/file/d/12F3CE2fU9yvALhuhOxuXy0R1SnKIkfoS/view" target="_blank"><div class="btn btn-download"><i class="icon-size" data-feather="download"></i></div></a>
+            <a href="https://fandyrdh.github.io/" target="_blank"><div class="btn"><i class="icon-size" data-feather="globe"></i></div></a>
+        </div>
+    </div>
+
+
+
+    <script>
+        feather.replace();
+
+        var miliday = 24 * 60 * 60 * 1000; //coverter
+        const lastUpdate =  new Date(2022, 06, 05); // month by index 0 - 11
+        const rightNow = new Date(); //now
+        const result = (rightNow-lastUpdate)/miliday;
+
+        document.getElementById('lastUpdate').innerHTML = Math.round(result); //set element
+
+
+
+
+    </script>
+</body>
+</html>
